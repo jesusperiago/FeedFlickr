@@ -1,0 +1,33 @@
+<div class="feed">
+  <div class="row ">
+    <div class="col-xs-10 ">
+      <a href="https://www.flickr.com/photos/{{data.owner.nsid}}/{{data.id}}/"  target="_blank" class="truncate title" >{{data.title._content}}</a>
+    </div>
+    <div class="col-xs-2 btn-bottom">
+      <button class="btn btn-info" ng-click="back()">Back</button>
+    </div>
+  </div>
+  <div class="row list-data">
+    <div class="col-xs-3">
+      <h4><a href="https://www.flickr.com/photos/{{data.owner.nsid}}"  target="_blank" class="lnk">Photo author</a></h4>
+    </div>
+    <div class="col-xs-1"><h4>|</h4></div>
+    <div class="col-xs-8">
+      <h4>Published: {{data.dates.posted * 1000|amDateFormat:'Do MMM YYYY [at] HH:MM'}} </h4>
+    </div>
+    <div class="col-xs-4">
+      <a href="https://www.flickr.com/photos/{{data.owner.nsid}}/{{data.id}}/"  target="_blank"><img src="{{url}}" alt="{{list.title}}" class="img-thumbnail img-responsive center-block"/></a>
+    </div>
+    <div class="col-xs-8" ng-bind-html="description">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-8 col-xs-offset-4">
+      <hr>
+      Tags:
+          <span ng-repeat="tags in data.tags.tag" class="tags">
+              {{tags.raw}}
+          </span>
+    </div>
+  </div>
+</div>

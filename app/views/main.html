@@ -1,0 +1,39 @@
+<div class="col-xs-12">
+
+  <div class="jumbotron col-xs-12" ng-repeat="feeds in data">
+
+        <div class="row col-xs-12 jumb">
+
+          <div class="col-xs-3">
+            <a href="#/{{feeds.link|getIdPhoto}}"><img src="{{feeds.media.m}}" alt="{{feeds.title}}" class="img-thumbnail center-block img-responsive img"/></a>
+          </div>
+          <div class="col-xs-9">
+            <div class="col-xs-12">
+              <h4>
+                <a href="#/{{feeds.link|getIdPhoto}}"  class="truncate">{{feeds.title}}
+                </a>
+              </h4>
+            </div>
+
+            <div class="col-xs-12 col-sm-6 col-sm-push-3 dates">
+              Published: {{feeds.published|amDateFormat:'Do MMM YYYY [at] HH:MM'}}
+            </div>
+
+            <div class="col-xs-6 col-sm-3 col-sm-pull-6">
+              <a href="https://www.flickr.com/photos/{{feeds.author_id}}"  target="_blank" class="lnk">
+                Post author
+              </a>
+            </div>
+
+            <div class="col-xs-6 col-sm-3">
+              <a href="{{feeds.link}}"  target="_blank" class="lnk">
+                View in flickr
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  </div>
+
+</div>
