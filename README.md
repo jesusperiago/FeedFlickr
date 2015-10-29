@@ -1,12 +1,20 @@
-# flickr
+# News photos public serve Flickr
 
-This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
-version 0.13.1.
+I used yeoman to generate this app. 
 
-## Build & development
+## Dependencies
+ npm install
 
-Run `grunt` for building and `grunt serve` for preview.
+Do not worry it will need a long time.
 
-## Testing
+##Test in local server
+grunt serve
 
-Running `grunt test` will run the unit tests with karma.
+#For building
+grunt
+ 
+ Update o create a folder dist.
+
+## Karma test
+grunt test
+
